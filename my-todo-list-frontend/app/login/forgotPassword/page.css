@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montaga&family=Poppins:wght@200;400;600&display=swap');
+
+#container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    background-color: #416C31;
+    height: 95%;
+    width: 95%;
+    border-radius: 2vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main form{
+    background-color: #FFF;
+    height: 22vmax;
+    width: 43vmax;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmax;
+    border-radius: 1vmax;
+    padding: 2vmax;
+}
+
+.main form h1{
+    font-family: 'Montaga', serif;
+    font-size: 2.4vmax;
+    color: #416C31;
+}
+
+.main form p{
+    font-size: 1vmax;
+}
+
+.inputfield{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.inputfield label{
+    color: #0f0f0f;
+    font-size: 1.5vmax;
+    font-weight: 900;
+}
+
+.inputfield input{
+    background-color: transparent;
+    border-radius: 0.3vmax;
+    border: 1px solid rgba(200, 195, 195, 0.87);
+    height: 2.9vmax;
+    width: 70%;
+    padding: 1.5vmax;
+}
+
+.inputfield input:focus{
+    outline: none;
+}
+
+.fpbtn{
+    width: 15vmax;
+    height: 3.8vmax;
+    background-color: rgb(5 60 255);
+    color: white;
+    border-radius: 0.7vmax;
+    margin: 0.8vmax;
+    transition: all 0.5s ease;
+}
+
+.fpbtn:hover{
+    scale: 1.2;
+}
+
+@media (max-width:540px) {
+    ::placeholder{
+        font-size: 1.5vmax;
+    }
+    .inputfield input{
+    padding-bottom: 1.6vmax;
+    }
+    .fpbtn {
+        width: 12vmax;
+        font-size: 2vmax;
+    }
+}
+
+@media (max-width:300px) {
+    .main form {
+        width: 34vmax;
+    }
+    .fpbtn {
+        width: 11vmax;
+        font-size: 1.5vmax;
+    }
+}

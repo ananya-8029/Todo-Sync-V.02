@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montaga&family=Poppins:wght@200;400;600&display=swap');
+#container{
+    display: flex;
+    width: 100%;
+}
+
+input:focus{
+    outline: none;
+    border: 0.25vmax #3e7c1f solid;
+}
+
+form{
+    height: 100%;
+    width: 100%;
+    gap: 0.4vmax;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 0 1.4vmax;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(182, 182, 182);
+    align-items: center;
+}
+
+form input{
+    border-radius: 0.4vmax;
+    background-color: white;
+    padding: 0 2vmax;
+    width: 100%;
+    color: rgb(18, 18, 18);
+}
+
+.input-field{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    gap: 3.4vmax;
+    height: 15%;
+}
+
+.task-input{
+    gap: 7.2vmax;
+}
+
+.tag-input{
+    gap: 8.3vmax;
+}
+
+label{
+    font-size: 1.3vmax;
+    color: whitesmoke;
+    font-weight: 900;
+}
+
+.btn{
+    height: 2.5vmax;
+    color: white;
+    font-weight: 900;
+    font-size: 1vmax;
+    transition: all 0.5s ease;
+    background-color: #3e7c1f;
+    border-radius: 0.4vmax;
+    width: 12%;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+
+#taskslist{
+    width: 30%;
+    padding: 3%;
+    color: white;
+}

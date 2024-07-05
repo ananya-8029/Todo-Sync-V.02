@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&family=Rammetto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+
+#landing_page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    gap: 5vmax;
+}
+
+#content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10vmin;
+    text-align: center;
+    margin-top: 5vmax;
+}
+
+#content h2::selection{
+    color: #34430e;
+    background-color: white;
+}
+
+#content p::selection{
+    color: white;
+    background-color: black;
+}
+
+#content h2{
+    -webkit-text-stroke: 0.4vmax white;
+    text-shadow: -4px -3px 3px rgba(0, 0, 0, 0.25);
+    font-family: 'Rammetto One', cursive;
+    font-size: 5vmax;
+    position: relative;
+    z-index: 999;
+    background: url("/images/textbg.jfif"), lightgray 50% / cover no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#content p{
+    line-height: 7.5vmin;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    width: 80%;
+    font-size: 1.8vmax;
+    position: relative;
+    z-index: 999;
+    color: rgb(39, 39, 39);
+}
+
+
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15vmax;
+    flex-wrap: nowrap;
+}
+
+.btn{
+    border-radius: 2vmax;
+    margin: 2vmax;
+    position: relative;
+    z-index: 99;
+    background: linear-gradient(to right, #41295a, #2f0743);
+    width: 15.5vmax;
+    height: 4.9vmax;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: 1.55vmax;
+    transition: 0.5s all ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover{
+    scale: 0.8;
+}
+
+@media (max-width:1280px){}
+
+@media (max-width:1024px){}
+
+@media (max-width:900px) {
+    
+    #content h2{
+        font-size: 5vmax;
+    }
+    #content h2 span{
+        font-size: 5.5vmax;
+    }
+    #content p {
+        font-size: 2.5vmax;
+    }
+    #content p {
+        font-size: 2vmax;
+    }
+    .btns {
+        gap: 5vmax;
+    }
+}
+
+@media (max-width:600px) {
+    .logo {
+        width: 9vmax;
+    }
+    #content h2{
+        font-size: 4.5vmax;
+    }
+    #content h2 span{
+        font-size: 5.4vmax;
+    }
+
+    #content p {
+        font-size: 2vmax;
+    }
+    #content {
+        height: 80vh;
+    }
+}
+
+@media (max-width:540px){
+    #content{
+        margin-top: 0;
+    }
+    #landing_page{
+        gap: 0;
+    }
+}
+
+@media (max-width:420px){
+    .btns{
+        gap: 0;
+    }
+    .btn{
+        width: 12vmax;
+        font-size: 1.3vmax;
+    }
+}
+
+@media (max-width:300px){
+    #content p {
+        font-size: 1.7vmax;
+    }
+}

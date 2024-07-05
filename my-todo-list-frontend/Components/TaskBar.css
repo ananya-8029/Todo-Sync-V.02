@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Montaga&family=Poppins:wght@200;400;600&display=swap");
+.profile {
+  height: 30%;
+  width: 70%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-bottom: 0.2vmax solid rgba(171, 170, 170, 0.947);
+}
+
+.profile h1 {
+  text-align: center;
+  font-family: "Montaga", serif;
+  color: white;
+  font-size: 2vmax;
+  margin: 0.5vmax;
+}
+
+.status-of-tasks {
+  height: 70%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 0.8vmax;
+  padding-top: 1.5vmax;
+}
+
+.status-of-tasks .status-completed{
+  gap: 1.6vmax;
+}
+
+.status-of-tasks .status-important{
+  gap: 1.5vmax;
+}
+
+.status-of-tasks div{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3vmax;
+  width: 100%;
+  gap: 1.2vmax;
+  padding: 0.3vmax 0.5vmax;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 0.5vmax;
+  transition: 0.5s all ease;
+  border-bottom: 0.1vmax solid #6eb158;
+}
+
+.status-of-tasks div:hover{
+  background-color: #98cf86;
+  border: none;
+}
+
+.icons{
+  font-size: 1.2vmax;
+}
+
+.important-icon{
+  color: #427830;
+}
+
+.all-icon{
+  color: rgb(217, 112, 112);
+}
+
+.completed-icon{
+  color: #174b05;
+}

@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montaga&family=Poppins:wght@200;400;600&display=swap');
+
+.logo{    
+    width: 11vmax;
+    margin: 3.5vmax;
+    position: absolute;
+    z-index: 99;
+}
+
+.signuppage{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url("/images/loginBg1.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.signupform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FFF;
+    opacity: 0.9;
+    filter: drop-shadow(5px 4px 12px rgba(0, 0, 0, 0.25));
+    height: 44vmax;
+    width: 95%;
+}
+
+.signupform h1{
+    font-family: 'Montaga', serif;
+    font-size: 2.8vmax;
+    color: #828D6D;
+}
+
+.signupform form{
+    height: 28vmax;
+    width: 70vmax;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5vmax;
+}
+
+.inputfield{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.inputfield label{
+    color: #0f0f0f;
+    font-size: 1.5vmax;
+    font-weight: 900;
+}
+
+.inputfield input{
+    background-color: transparent;
+    border-radius: 0.3vmax;
+    border: 1px solid rgba(200, 195, 195, 0.87);
+    height: 2.9vmax;
+    width: 70%;
+    padding: 1.5vmax;
+}
+
+.inputfield input:focus{
+    outline: none;
+}
+
+.nameinputfield{
+    gap: 3vmax;
+}
+
+.emailinputfield{
+    gap: 3vmax;
+}
+
+.signupbtn{
+    width: 15vmax;
+    height: 3.8vmax;
+    background-color: rgb(5 60 255);
+    color: white;
+    border-radius: 0.7vmax;
+    margin: 0.8vmax;
+    transition: all 0.5s ease;
+}
+
+.signupform p{
+    font-family: 'Poppins', sans-serif;
+}
+
+.signupbtn:hover{
+    scale: 1.2;
+}
+
+::placeholder{
+    font-weight: 200;
+}
+
+.signupform p span{
+    color: blueviolet;
+    transition: 0.2s all ease;
+}
+
+.signupform p span:hover{
+    text-decoration: underline;
+}
+
+@media (max-width:1024px){
+    ::placeholder{
+        font-size: 1.1vmax;
+    }
+}
+
+@media (max-width:920px){
+    .signupform form {
+        width: 56vmax;
+    }
+}
+
+@media (max-width:420px){
+    .signupform form {
+        width: 36vmax;
+    }
+    .signupform p {
+        font-size: 1.5vmax;
+    }
+    .signupbtn {
+        font-size: 1.3vmax;
+        width: 13vmax;
+    }
+    .logo {
+        margin: 2.5vmax;
+    }
+    .inputfield input{
+        padding-bottom: 2.2vmax;
+    }
+}
