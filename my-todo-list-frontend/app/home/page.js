@@ -89,7 +89,7 @@ const Page = (props) => {
       // console.log(taskId);
       const authToken = localStorage.getItem("authToken");
       const response = await axios.delete(
-        `http://localhost:5000/api/tasks/deletetask/${taskId}`,
+        `${process.env.Backend_URL}/api/tasks/deletetask/${taskId}`,
         {
           headers: {
             "Content-Type": "application/json",

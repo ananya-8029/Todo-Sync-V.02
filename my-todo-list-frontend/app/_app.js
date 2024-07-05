@@ -1,5 +1,6 @@
 import { Provider } from 'react-redux';
 import store from './redux/store'; 
+require('dotenv').config()
 
 function MyApp({ Component, pageProps }) {
   console.log(store)

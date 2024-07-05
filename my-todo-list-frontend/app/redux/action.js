@@ -8,7 +8,7 @@ export const fetchUser = () => async (dispatch) => {
       const authToken = localStorage.getItem("authToken");
       console.log(authToken)
       // Fetch user data from the server
-      const response = await fetch("http://localhost:5000/api/auth/getuser", {
+      const response = await fetch(`${process.env.Backend_URL}/api/auth/getuser`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -45,7 +45,7 @@ export const fetchTasks = () => async (dispatch) => {
       const authToken = localStorage.getItem("authToken");
       // console.log(authToken)
       // Fetch user data from the server
-      const response = await fetch("http://localhost:5000/api/tasks/fetchalltasks", {
+      const response = await fetch(`${process.env.Backend_URL}/api/tasks/fetchalltasks`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

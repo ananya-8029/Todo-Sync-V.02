@@ -9,13 +9,12 @@ const Page = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  
   const router=useRouter();
-
   const submit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/createuser", {
+      const response = await axios.post(`${process.env.REACT_APP_Backend_URL}/api/auth/createuser`, {
           name,
           email,
           password,

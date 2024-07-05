@@ -10,7 +10,7 @@ const page = () => {
       e.preventDefault();
       try {
         await axios
-          .post("http://localhost:5000/login/forgotPassword", {
+          .post(`${process.env.Backend_URL}/login/forgotPassword`, {
             email,
           })
           .then()
