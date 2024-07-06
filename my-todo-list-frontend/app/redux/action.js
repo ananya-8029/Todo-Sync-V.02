@@ -44,7 +44,7 @@ export const fetchTasks = () => async (dispatch) => {
   try {
     if (typeof window !== "undefined") {
       const authToken = localStorage.getItem("authToken");
-      // console.log(authToken)
+      
       // Fetch user data from the server
       const response = await fetch(`${config.backendUrl}/api/tasks/fetchalltasks`, {
         method: "GET",
