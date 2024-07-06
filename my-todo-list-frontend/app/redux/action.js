@@ -1,5 +1,5 @@
 "use client";
-import config from "../config";
+import backendURL from "../backendURL";
 import { setUser } from "./reducer";
 import { addTasks } from "./reducer"
 
@@ -9,7 +9,7 @@ export const fetchUser = () => async (dispatch) => {
       const authToken = localStorage.getItem("authToken");
       console.log(authToken)
       // Fetch user data from the server
-      const response = await fetch(`${config.backendUrl}/api/auth/getuser`, {
+      const response = await fetch(`${backendURL.backendUrl}/api/auth/getuser`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -46,7 +46,7 @@ export const fetchTasks = () => async (dispatch) => {
       const authToken = localStorage.getItem("authToken");
       
       // Fetch user data from the server
-      const response = await fetch(`${config.backendUrl}/api/tasks/fetchalltasks`, {
+      const response = await fetch(`${backendURL.backendUrl}/api/tasks/fetchalltasks`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
