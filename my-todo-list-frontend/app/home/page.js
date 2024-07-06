@@ -16,7 +16,7 @@ const mapStateToProps = (state) => {
   return {
     tasks: state.tasks,
     user: state.user,
-    completed: state.completed
+    completed: state.completed,
   };
 };
 
@@ -24,7 +24,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     addTask: (obj) => dispatch(addTasks(obj)),
     removeTask: (id) => dispatch(removeTasks(id)),
-    addCompletedTask: (id) => dispatch(addCompletedTask(id))
+    addCompletedTask: (id) => dispatch(addCompletedTask(id)),
   };
 };
 
@@ -79,9 +79,9 @@ const Page = (props) => {
     if (typeof window !== "undefined") {
       const authToken = localStorage.getItem("authToken");
       // console.log(authToken)
-      // if (!authToken) {
-      //   router.push("/login");
-      // }
+      if (!authToken) {
+        router.push("/login");
+      }
     }
   }, []);
 
@@ -110,7 +110,7 @@ const Page = (props) => {
     try {
     } catch (error) {}
   };
-  // console.log(props);
+
   return (
     <>
       <div className="main">

@@ -2,6 +2,7 @@
 import React from "react";
 import "./TaskBar.css";
 import { connect } from "react-redux";
+import { useRouter } from "next/navigation";
 
 const mapStateToProps = (state) => {
   return {
@@ -11,9 +12,11 @@ const mapStateToProps = (state) => {
 };
 
 const TaskBar = (props) => {
-  const handleLogOut = ()=>{
-    console.log("Log out clicked")
-  }
+  const router = useRouter();
+  const handleLogOut = () => {
+    localStorage.removeItem("authToken");
+    router.push("/");
+  };
   return (
     <>
       <div className="profile">
