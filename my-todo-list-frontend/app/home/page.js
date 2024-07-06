@@ -79,9 +79,9 @@ const Page = (props) => {
     if (typeof window !== "undefined") {
       const authToken = localStorage.getItem("authToken");
       // console.log(authToken)
-      if (!authToken) {
-        router.push("/login");
-      }
+      // if (!authToken) {
+      //   router.push("/login");
+      // }
     }
   }, []);
 

@@ -21,37 +21,61 @@
   width: 70%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
   font-size: 0.8vmax;
-  padding-top: 1.5vmax;
+  padding: 1.5vmax 0;
 }
 
-.status-of-tasks .status-completed{
-  gap: 1.6vmax;
+.status-of-task-subcontainer{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+
+.status-completed{
+  gap: 0;
 }
 
 .status-of-tasks .status-important{
   gap: 1.5vmax;
 }
 
-.status-of-tasks div{
+.status-of-tasks .status-of-task-subcontainer div{
   display: flex;
   justify-content: flex-start;
   align-items: center;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.3vmax;
+  font-size: 1vmax;
   width: 100%;
   gap: 1.2vmax;
   padding: 0.3vmax 0.5vmax;
-  font-weight: 500;
+  font-weight: 300;
   cursor: pointer;
   border-radius: 0.5vmax;
   transition: 0.5s all ease;
   border-bottom: 0.1vmax solid #6eb158;
 }
 
-.status-of-tasks div:hover{
+.log-outbtn{
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-weight: 300;
+  gap: 1.2vmax;
+  font-size: 1vmax;
+  transition: 0.5s all ease;
+  border-bottom: 0.1vmax solid #6eb158;
+  border-radius: 0.5vmax;
+  padding: 0.3vmax 0.5vmax;
+  width: 100%;
+}
+
+.status-of-tasks .status-of-task-subcontainer div:hover , .log-outbtn:hover{
   background-color: #98cf86;
   border: none;
 }
