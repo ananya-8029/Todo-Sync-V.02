@@ -4,17 +4,18 @@ import axios from "axios";
 import "./page.css";
 import Link from 'next/link'
 import { useRouter } from "next/navigation";
+import config from "../config";
 
 const Page = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+
   const router=useRouter();
   const submit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${process.env.REACT_APP_Backend_URL}/api/auth/createuser`, {
+      const response = await axios.post(`${config.backendUrl}/api/auth/createuser`, {
           name,
           email,
           password,

@@ -2,6 +2,7 @@
 import React,{ useState } from 'react'
 import "./page.css";
 import axios from "axios";
+import config from '@/app/config';
 
 const page = () => {
     const [email, setEmail]=useState('')
@@ -10,7 +11,7 @@ const page = () => {
       e.preventDefault();
       try {
         await axios
-          .post(`${process.env.Backend_URL}/login/forgotPassword`, {
+          .post(`${config.backendUrl}/login/forgotPassword`, {
             email,
           })
           .then()

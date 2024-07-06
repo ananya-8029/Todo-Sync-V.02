@@ -5,6 +5,7 @@ import "./Form.css";
 import { connect } from "react-redux";
 import { addTasks } from "../app/redux/reducer.js";
 import { useRouter } from "next/navigation";
+import config from "@/app/config";
 
 const mapStateToProps = (state) => {
   return {
@@ -29,7 +30,7 @@ const Form = (props) => {
     const authToken = localStorage.getItem("authToken");
     try {
       const response = await axios.post(
-        `${process.env.Backend_URL}/api/tasks/addtask`,
+        `${config.backendUrl}/api/tasks/addtask`,
         {
           task,
           description,

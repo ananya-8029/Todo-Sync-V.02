@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { useDispatch } from 'react-redux';
 import { setUser } from '../redux/reducer.js';
 import { connect } from "react-redux";
+import config from "../config";
 
 const mapStateToProps = (state) => {
   return {
@@ -30,7 +31,7 @@ const Page = (props) => {
   const handleSubmit = async () => {
     try {
       const response = await axios.post(
-        `${process.env.Backend_URL}/api/auth/login`,
+        `${config.backendUrl}/api/auth/login`,
         {
           email,
           password,

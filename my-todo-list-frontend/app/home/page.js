@@ -10,6 +10,7 @@ import { addCompletedTask, addTasks, removeTasks } from "../redux/reducer.js";
 import { FaEraser } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck, faStar } from "@fortawesome/free-solid-svg-icons";
+import config from "../config";
 
 const mapStateToProps = (state) => {
   return {
@@ -89,7 +90,7 @@ const Page = (props) => {
       // console.log(taskId);
       const authToken = localStorage.getItem("authToken");
       const response = await axios.delete(
-        `${process.env.Backend_URL}/api/tasks/deletetask/${taskId}`,
+        `${config.backendUrl}/api/tasks/deletetask/${taskId}`,
         {
           headers: {
             "Content-Type": "application/json",
