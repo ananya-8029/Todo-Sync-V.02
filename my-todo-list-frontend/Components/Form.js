@@ -48,13 +48,13 @@ const Form = (props) => {
         alert(response.data.error);
       } else {
         const { task, description, tag } = response.data;
-        console.log(props.tasks)
+        // console.log(props.tasks)
         props.addTask({
           task: task,
           description: description,
           tag: tag,
         });
-        console.log(props.tasks)
+        // console.log(props.tasks)
       }
 
       // Clear the form fields after successful submission

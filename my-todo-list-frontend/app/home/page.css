@@ -83,6 +83,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 3vmax;
+  backdrop-filter: blur(2px);
 }
 
 .notes-content ul li div h1 {
@@ -133,6 +134,7 @@
   cursor: pointer;
   transition: all 0.5s ease;
   flex-direction: column;
+  backdrop-filter: blur(5px);
 }
 
 .add-task-btn:hover {
