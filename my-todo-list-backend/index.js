@@ -2,7 +2,7 @@ const express = require("express");
 var cors = require("cors");
 const connectToMongo = require("./db");
 connectToMongo();
-require("dotenv").config({ path: ".env.local" });
+require("dotenv").config();
 
 // const nodemailer = require("nodemailer");
 const app = express();

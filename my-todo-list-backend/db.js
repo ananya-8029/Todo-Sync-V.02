@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-require("dotenv").config({ path: ".env.local" });
+require("dotenv").config();
 const mongoURI = process.env.MONGO_URI;
 
 const connectToMongo = () => {

@@ -73,7 +73,7 @@ router.post("/taskcomplete/:id", fetchuser, async (req, res) => {
 
     const updatedTask = await Task.findByIdAndUpdate(
       taskId,
-      { completed: true },
+      { completed: !taskId.completed },
       { new: true } // Return the updated task
     );
     res.json(updatedTask);
